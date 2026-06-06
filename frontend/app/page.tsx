@@ -34,7 +34,8 @@ export default function Home() {
     setResult(null);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/plan", {
+      // UPDATED: Now pointing to your live Render backend
+      const response = await fetch("https://multi-agent-planner-yg15.onrender.com/api/plan", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ idea }),
@@ -147,7 +148,7 @@ export default function Home() {
                   </section>
                 )}
 
-                {/* 2. Implementation Timeline Output (MOVED UP) */}
+                {/* 2. Implementation Timeline Output */}
                 {result.timeline && (
                   <section className="bg-[#1c1c1c] p-8 rounded-2xl border border-neutral-800 shadow-xl">
                     <h2 className="text-xl font-bold text-[#E02424] mb-6 flex items-center gap-2">
@@ -178,7 +179,7 @@ export default function Home() {
                   </section>
                 )}
 
-                {/* 3. Architectural Strategy Output (MOVED DOWN) */}
+                {/* 3. Architectural Strategy Output */}
                 {result.architecture && (
                   <section className="bg-[#1c1c1c] p-8 rounded-2xl border border-neutral-800 shadow-xl">
                     <h2 className="text-xl font-bold text-[#E02424] mb-6 flex items-center gap-2">
