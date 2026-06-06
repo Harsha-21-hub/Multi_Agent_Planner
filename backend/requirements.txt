@@ -2,5 +2,6 @@ fastapi
 uvicorn
 langgraph
 openai
+google-genai
 pydantic
 python-dotenv
